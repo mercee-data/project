@@ -1,0 +1,136 @@
+.buy-units-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.buy-units-container h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.buy-units-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.buy-units-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.buy-units-form label {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-units-form input,
+.buy-units-form select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buy-units-form button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-units-form button:hover {
+  background-color: #218838;
+}
+
+/* PayPal Button container */
+#paypal-button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Response Message */
+.response-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.response-message p {
+  margin: 0;
+}
+
+.response-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.response-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 480px) {
+  .buy-units-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+  }
+
+  .buy-units-container h2 {
+    font-size: 24px;
+  }
+
+  .buy-units-form label,
+  .buy-units-form input,
+  .buy-units-form select {
+    font-size: 14px;
+  }
+
+  .buy-units-form button {
+    font-size: 16px;
+  }
+}

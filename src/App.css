@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: aqua; /* aqua background */
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Ensures the sidebar is scrollable if needed */
+}
+
+.sidebar-logo {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 30px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links inside Sidebar */
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Vertical arrangement */
+  overflow-y: auto; /* Ensures the links are scrollable if there's too much content */
+}
+
+.nav-links a {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  color: black; /* Keep text color black */
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a .icon {
+  font-size: 20px; /* Icon size */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #0056b3; /* Highlight active or hovered links */
+  font-weight: bold;
+  color: white; /* Contrast hover text */
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  background-color: #fff;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.navbar {
+  background-color: aqua; /* Match sidebar color */
+  color: black;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  z-index: 10;
+}
+
+.navbar span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Form and Input Styling */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* "Buy Units" Page Specific Styling */
+.buy-units-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 60px; /* Adjust for navbar overlap */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-units-container h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.buy-units-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buy-units-form input,
+.buy-units-form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.buy-units-form button {
+  background-color: #28a745; /* Green for purchase */
+}
+
+.buy-units-form button:hover {
+  background-color: #218838;
+}
+
+/* "Energy Tips" Page Specific Styling */
+.energy-tips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 60px; /* Adjust for navbar overlap */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.energy-tips-container h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.energy-tips-list {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.energy-tips-list p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.energy-tips-list li {
+  background-color: #e9f7fe;
+  border: 1px solid #007bff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.energy-tips-list li:hover {
+  background-color: #d0e9f7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    left: 0;
+  }
+
+  .sidebar a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .buy-units-container {
+    margin: 20px;
+  }
+
+  .energy-tips-container {
+    margin: 20px;
+  }
+}

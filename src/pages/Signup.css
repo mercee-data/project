@@ -1,0 +1,154 @@
+/* General Signup Styles */
+.signup-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.signup-heading {
+  font-size: 32px;
+  color: #4a90e2;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.signup-form input {
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+button {
+  padding: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+  transform: translateY(-2px);
+}
+
+/* Google Sign-Up Button */
+.google-signup {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the Google button */
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background-color: #4285f4; /* Google Blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%; /* Make the Google button wider */
+}
+
+.google-button:hover {
+  background-color: #357ab8;
+  transform: translateY(-2px);
+}
+
+.google-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.google-button span {
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Loading Spinner for the Sign-Up Button */
+button:disabled {
+  background-color: #c8d6e5;
+  cursor: not-allowed;
+}
+
+button:disabled::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top: 2px solid transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .signup-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .google-button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}

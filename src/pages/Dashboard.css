@@ -1,0 +1,158 @@
+/* General Container Styling */
+.container {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff; /* White background for clean look */
+  border-radius: 15px; /* More pronounced rounded corners */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevents overflow outside the container */
+  border: 1px solid #ddd; /* Light border to define the section */
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: #4a90e2; /* Eye-catching blue color */
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Larger font size for header */
+  font-weight: 600; /* Bold header */
+}
+
+/* Section Titles */
+h2 {
+  color: #333; /* Dark gray for readability */
+  margin-bottom: 15px;
+  font-size: 1.8rem; /* Slightly larger section titles */
+  font-weight: 500;
+  border-bottom: 3px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+/* Input Styling */
+input {
+  margin: 10px 0;
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* More rounded input fields */
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #4a90e2; /* Highlight border on focus */
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.5); /* Soft shadow for focus effect */
+}
+
+/* Button Styling */
+button {
+  margin-top: 12px;
+  padding: 12px 24px;
+  background-color: #4a90e2; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded button corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #357ab8; /* Darker shade on hover */
+}
+
+button.delete {
+  background-color: #e74c3c; /* Red for delete */
+}
+
+button.delete:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.2rem; /* Larger font size for table headers */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7; /* Light gray background for even rows */
+}
+
+tbody tr:hover {
+  background-color: #e3e3e3; /* Hover effect for rows */
+}
+
+td button {
+  padding: 6px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Footer Section for Remaining Units */
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+strong {
+  color: #333;
+}
+
+/* Overall Background */
+body {
+  background-color: #eef2f5; /* Light gray-blue overall page background */
+  font-size: 16px; /* Default font size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust header size on smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust section title size */
+  }
+
+  input,
+  button {
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+  }
+}

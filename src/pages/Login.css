@@ -1,0 +1,152 @@
+/* Global Styles for Login Page */
+.auth-container {
+  width: 100%;
+  max-width: 800px; /* Wider container for better alignment */
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Prominent shadow for depth */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space between heading and form */
+  animation: fadeIn 0.5s ease-in-out; /* Smooth entry animation */
+}
+
+/* Fade-in animation for smooth entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Heading Styling */
+.auth-form h2 {
+  font-size: 32px;
+  color: #4a90e2; /* Soft blue color */
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left; /* Align to the left for professional look */
+  max-width: 200px;
+}
+
+/* Form Styling */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Larger spacing between elements */
+  width: 100%; /* Adjust width for alignment */
+}
+
+.auth-form input {
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4); /* Subtle glow */
+}
+
+/* Button Styling */
+button {
+  padding: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+  transform: translateY(-2px); /* Lift on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Revert on click */
+}
+
+/* Error Message Styling */
+.auth-error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #357ab8; /* Slightly darker blue on hover */
+}
+
+/* Sign Up Section */
+.signup-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-section p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-button {
+  background-color: transparent;
+  color: #4a90e2;
+  font-size: 16px;
+  border: 2px solid #4a90e2;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column; /* Stack layout for smaller screens */
+    max-width: 90%;
+    padding: 30px; /* Add padding for smaller screens */
+  }
+
+  .auth-form h2 {
+    text-align: center; /* Center-align text on mobile */
+    margin-bottom: 30px;
+  }
+
+  .forgot-password,
+  .signup-section {
+    text-align: center;
+  }
+}
